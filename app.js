@@ -25,6 +25,9 @@ app.use("/graphql",graphqlHTTP({
 //allow cross-origin requests
 app.use(cors())
 
+const port = process.env.PORT || 4000
+
+
 
 //serve static assets if in production
 if(process.env.NODE_ENV === "production"){
@@ -37,6 +40,6 @@ if(process.env.NODE_ENV === "production"){
 }
 
 
-app.listen(4000,()=>{
-    console.log("now listening for request on port 4000")
+app.listen(port,()=>{
+    console.log(`now listening for request on port${port}`)
 })

@@ -3,16 +3,21 @@ const {graphqlHTTP} = require("express-graphql")
 const schema = require("./schema/shema")
 const mongoose = require("mongoose")
 const cors = require("cors")
+const dotenv = require("dotenv")
+
 
 
 
 const app = express();
 
+
+//activating the dotenv package
+dotenv.config()
+
 //connect to mlab database
 //make sure to replace my db string & creds with your own
-mongoose.connect("mongodb+srv://Quincy:Tamaradeyefa@cluster0.jeegb.mongodb.net/Graph0?retryWrites=true&w=majority")
-mongoose.connection.once("open",()=>{
-    console.log("connected to database")
+mongoose.connect(process.env.DATABASE_ACCESS,{ useUnifiedTopology: true },()=>{
+    console.log("database connected")
 })
 
 //middleware

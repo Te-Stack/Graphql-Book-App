@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {  graphql } from 'react-apollo'
-//import {flowright as compose} from "lodash"
 import {compose} from "recompose"
 
 import { getAuthorsQuery,addBookMutation, getBooksQuery } from "../queries/queries";
@@ -8,7 +7,7 @@ import { getAuthorsQuery,addBookMutation, getBooksQuery } from "../queries/queri
 
 class AddBook extends Component {
     constructor(props){
-        super(props)
+        super(props) 
         this.state={
             name:"",
             genre:"",

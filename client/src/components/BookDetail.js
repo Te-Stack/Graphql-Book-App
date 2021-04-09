@@ -6,7 +6,7 @@ import { getBookQuery } from '../queries/queries'
     displayBookDetails=()=>{
         const {book} = this.props.data
         if(book){
-            return <div>
+            return <div> 
                 <h2>{book.name}</h2>
                 <p>{book.genre}</p>
                 <p>{book.author.name}</p>

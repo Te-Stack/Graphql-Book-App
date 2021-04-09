@@ -5,10 +5,10 @@ import ApolloClient from "apollo-boost"
 import {ApolloProvider} from "react-apollo"
 import AddBook from './components/AddBook'
 
-
+ 
 //apollo-client-setup
 const client = new ApolloClient({
-  uri:"http://localhost:4000/graphql"
+  uri:"http://localhost:4000/graphql/"
 })
  
 class App extends Component {

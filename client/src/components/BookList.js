@@ -8,11 +8,12 @@ import BookDetail from './BookDetail';
 class BookList extends Component {
     constructor(props){
         super(props)
-        this.state={
+        this.state ={
             selected:null
         }
     }
-    displaybook(){
+
+    displaybook =() =>{
         var data = this.props.data
         if(data.loading){
             return (<div>Loading books....</div>)
@@ -23,7 +24,7 @@ class BookList extends Component {
                     <li key={book.id} onClick={(e)=>{this.setState({selected:book.id})}}>{book.name}</li>
                 )
             })
-        }
+        } 
     }
     render() {
         return (
